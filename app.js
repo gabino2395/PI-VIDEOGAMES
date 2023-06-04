@@ -2,7 +2,7 @@
 const express = require("express");
 const cors=require('cors')
 const server = express();
-const mainRouter=require('./routes/index')
+const mainRouter=require('./src/routes/index')
 
 server.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*'); // update to match the domain you will make the request from
