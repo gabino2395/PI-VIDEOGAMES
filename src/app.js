@@ -2,6 +2,7 @@
 const express = require("express");
 const cors=require('cors')
 const server = express();
+const mainRouter=require('./routes/index')
 
 server.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*'); // update to match the domain you will make the request from
@@ -13,7 +14,6 @@ server.use((req, res, next) => {
 
 
 const morgan = require("morgan");
-const mainRouter=require('./routes/index')
 server.use(cors())
 server.use(morgan("dev"));
 server.use(express.json());
